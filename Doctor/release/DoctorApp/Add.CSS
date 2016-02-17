@@ -1,0 +1,175 @@
+body
+{
+  background: white;
+
+  
+}
+h1
+{
+  text-align: center;
+}
+form
+{
+  text-align: center;
+  display: inline-block;
+
+}
+#register
+{ 
+    margin: 0;
+     background: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%) }
+ 
+}
+#logo {
+    display: block;
+   
+  
+}
+#leftMenu
+{
+  background:#B1A0C7;
+}
+#mainArea
+{
+  background: white;
+}
+#content
+{
+  padding-left: 20px;
+  padding-right: 40px;
+}
+.myClass
+{
+  display: none;
+}
+ #navigationbar
+  {
+    background-color:#60497A;
+  }
+nav {
+  width: 100%;
+  margin: 20px 0;
+   height: 100%;
+    bottom:0px; 
+  position: relative;
+   
+    background-color:#60497A;
+     
+  }
+/* Make the list of links take up the whole width of the nav */
+nav ul {
+  width: 100%;
+   height: 100%;
+    list-style-type: none;
+    
+  
+  }
+  nav ul li {
+  width: 29%;
+   height: 100%;/* from above */
+  float: left;
+  display: inline-block;
+  
+
+  }
+nav ul li a {
+
+  display: block;
+  width: 100%;
+  height: 100%;
+   
+
+  }
+  a
+  {
+    text-wrap: normal;
+    text-decoration: blink;
+    color: black;
+  }
+a:active 
+{
+  color: white;
+  font-weight:bold;
+}
+
+ .mainDiv {
+        text-align: center;
+    }
+    .demoDiv {
+        display: inline-block;
+        text-align: center;
+        vertical-align: top;
+        margin: 10px;
+    }
+    .grp {
+        width: 100%;
+        display: block;
+        margin-bottom: 10px;
+    }
+    .btn-custom {
+        width: 120px;
+        height: 33px;
+        vertical-align: central;
+        text-align: center;
+        color: white;
+        background-color: #84D3F5;
+        font-weight: bolder;
+        cursor: pointer;
+        margin-bottom: 3px;
+    }
+    .btn-custom:hover {
+        padding-top: 3px;
+        border-bottom: 3px solid #4D952F;
+    }
+    table#t1 tr:nth-child(even) {
+    background-color:#BCA9F5;
+}
+table#t1 tr:nth-child(odd) {
+    background-color:#D0A9F5;
+}
+table#t1 th {
+    color: white;
+    background-color: #60497A;
+    padding:5px;
+}
+table#t1 td{
+  padding:5px;
+}
+table#t2 tr:nth-child(even) {
+    background-color:#BCA9F5;
+}
+table#t2 tr:nth-child(odd) {
+    background-color:#D0A9F5;
+}
+table#t2 th {
+    color: white;
+    background-color: #60497A;
+    padding:5px;
+}
+table#t3 td{
+  padding:5px;
+}
+  table#t3 tr:nth-child(even) {
+    background-color:#BCA9F5;
+}
+table#t3 tr:nth-child(odd) {
+    background-color:#D0A9F5;
+}
+table#t3 th {
+    color: white;
+    background-color: #60497A;
+    padding:5px;
+}
+table#t3 td{
+  padding:5px;
+}
+
+ 
+
+  
+ 

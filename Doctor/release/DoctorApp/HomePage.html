@@ -1,0 +1,84 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+<title>Meridian Home Page</title>
+<link rel="stylesheet" href="Add.CSS">
+<script type="text/javascript"
+	src="http://code.jquery.com/jquery-1.9.1.js">
+  function useridcheck()
+  {
+    document.getElementById("Doctor").style.display = "none";
+    document.getElementById("Patient").style.display = "inline-block";
+}
+function doctor() {
+    document.getElementById("Patient").style.display = "none";
+    document.getElementById("Doctor").style.display = "inline-block";
+}
+  </script>
+</head>
+<body>
+	<div id="header"
+		style="height: 20%; width: 100%; float: left; background-color: #60497A">
+		<div id="ImageLogo" style="height: 20%; width: 15%; float: left;">
+			<img class="logo" src="logo.png" alt=" logo" />
+		</div>
+		<div id="space" style="height: 20%; width: 30%; float: left;">
+		</div>
+		<div id="navigationbar""height:100%; width:100%; float:left;">
+			<nav>
+				<ul>
+					<li><a href="HomePage.html" class="active"
+						style="padding-left: 50px;">Home</a></li>
+					<li><a href="AppointmentHistory.html">Appointment History</a>
+					</li>
+					<li><a href="BookAppointment.html">BookAppointment</a></li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+	<div id="ImageBanner" style="height: 10%; width: 100%;">
+		<img class="banner" src="Banner.png" alt="banner"
+			style="height: 20%; width: 100%;" />
+	</div>
+	<div id="leftMenu" style="height: 400px; width: 30%; float: left">
+		<div align="center">
+			<br>
+			<br> <br> <br> <br>
+			<form action="/DrApp/controller">
+				<div id="Login">
+					<center>
+						UserName : <input type="text" id="userName" name="userName" value="" /><br>
+					</center>
+					<center>
+						Password : <input type="password" id="Password" name="Password" value="" />
+					</center>
+					<br>
+					<br />
+					<br /> <input type="submit" value="submit" /> 
+					<br />
+				</div>
+			</form>
+			<input type="button"
+						value="register" onclick="register.html" /><br />
+		</div>
+	</div>
+	<div id="mainArea" style="height: 100%; width: 70%; float: left">
+		<br> <br>
+		<center>OUR SERVICES</center>
+		<br> <br>
+		<div id="content" style="height: 100%; width: 100%; float: left">
+			<p>Meridian Health provides health care services where you and
+				your family need it the most. In the hospital, community, and
+				in-home settings, our services are tailored to your needs, and we
+				are committed to advancing our medical services through clinical
+				education and research. Our comprehensive services include
+				cutting-edge diagnostic procedures, innovative treatment options,
+				and compassionate care by our team of skilled health professionals.
+				Be inspired by real life stories of people in your community who
+				have triumphed over a health challenge and reconnected to what
+				matter most.</p>
+		</div>
+	</div>
+</body>
+</html>

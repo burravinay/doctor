@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<project name="DoctorApp" default="All" basedir="." >
+	<property name="java.src.dir" value = ".\src" />
+	<property name="web.pages.dir" value = ".\webpages" />
+	<property name="config.dir" value = ".\config" />
+	<property name="dest.dir" value = ".\release" />
+	<property name="doctorapp.web.dir" value = ".\release\DoctorApp" />
+	<property name="lib.dir"  value = ".\lib" />
+	
+	<target name="All" depends="Clean,Init,WebFiles,Compile">
+	</target>
+	
+	<target name="Clean" >
+		<delete dir="${doctorapp.web.dir}"></delete>
+	</target>
+	
+	<target name="Init" >
+		<mkdir dir="${doctorapp.web.dir}"/>
+		<mkdir dir="${doctorapp.web.dir}/WEB-INF"/>
+		<mkdir dir="${doctorapp.web.dir}/WEB-INF/classes"/>
+		<mkdir dir="${doctorapp.web.dir}/WEB-INF/lib"/>
+	</target>
+	
+	<target name="WebFiles">
+		<copy todir="${doctorapp.web.dir}">
+			<fileset dir="${web.pages.dir}"/>
+		</copy>
+		<copy file="${config.dir}/web.xml" todir="${doctorapp.web.dir}/WEB-INF"/>
+		<copy file="${config.dir}/weblogic.xml" todir="${doctorapp.web.dir}/WEB-INF"/>
+	</target>
+		
+	
+	<target name="Compile" >
+		<!-- setting classpath for javac command -->
+		<path id="my.class.path">
+			<!-- this classpath includes the folder with property name lib.dir  -->
+			<fileset dir="${lib.dir}">
+				<include name="*.jar"/><!-- include all jars in this folder -->
+			</fileset>
+		</path>
+		<!-- javac ant task compiles and creates folder strcutore as well -->
+	    <javac includeantruntime="false" classpathref="my.class.path" destdir="${doctorapp.web.dir}/WEB-INF/classes" debug="true">
+	    	<src path="${java.src.dir}" />
+		</javac>
+	</target>
+	
+</project>

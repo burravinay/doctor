@@ -1,0 +1,314 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+
+   
+    <link rel="stylesheet" href ="Add.CSS">
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+        
+  <script type = "text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>  
+  <script type="text/javascript" src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script> 
+  <script type="text/javascript" language="JavaScript" src="http://code.jquery.com/jquery-1.9.0.min.js"></script>
+  <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+  
+
+  <script type="text/javascript" language="JavaScript">
+          $(document).ready(function () {
+         $("#Select1 > option").each(function () {
+             $("#" + this.value).hide(); // hides all tables
+         });
+         });
+
+         function ShowTable(select1) {
+                              $("#Select1 > option").each(function () {
+                                  $("#" + this.value).hide(); // hides all tables
+                              });
+
+                              $("#" + select1.value).show(); // shows the selected table
+         }
+
+        $(function() {
+            $( "#picker" ).datepicker({ minDate: 0});
+               });
+    $(function showLeftMenu(){
+     document.getElementById("leftMenu").style.display="inline-block";
+    });
+  
+  </script>
+
+     <title>Meridian Home Page</title>
+</head>
+
+<body>
+      
+    <div id = "header" style ="height:20%; width:100%; float:left;background-color:#60497A">
+        
+    <div id = "ImageLogo" style ="height:20%; width:15%; float:left;" >  
+        <img  class= "logo" src="logo.png" alt=" logo"  />
+   </div>
+    <div id = "space" style ="height:20%; width:30%; float:left;" >  
+        
+   </div>
+    <div id = "navigationbar" "height:100%; width:100%; float:left;">
+    <nav>
+        <ul>
+             <li>
+                
+               <a href="HomePage.html" class="active" style = "padding-left: 50px;">Home</a>
+          
+            </li>
+             <li>
+           
+                <a href="AppointmentHistory.html">Appointment History</a>
+          
+            </li>
+             <li>
+            
+                 <a href="BookAppointment.html">BookAppointment</a>
+
+            </li>
+        </ul>
+    </nav>
+    </div>
+    </div>
+       
+   
+    <div id = "ImageBanner" style ="height:10%; width:100%;" >
+           <img  class= "banner" src="Banner.png" alt="banner" style= "height:20%; width: 100%;" />  
+    </div>
+   
+   <div id="leftMenu" style="height: 50%; width: 30%;float: left;display:none;">
+             <br> <br> <br>  <br/>
+             <center><div id = "doctor1" style ="height:20%; width:15%;float:none"; >
+                        <img  class= "doctorImage" src="doctor1.jpg" alt="doctorImage" style="height:120%;width:120%;"  />
+                      </div>
+                      Name:  <input type= "text" id="name" value="doctor1"/>
+             <br/>  <br/>
+             Qualification :<input type= "text" id="name" value="MD from univeristy of california"/>
+            <br/>  <br/>
+          
+             Description :<input type= "text" id="name" value=" I am so n so"/>
+           
+             <br>
+                <br>
+                      Ratings :<input type= "text" id="name" value=" 5"/>
+                        <br/>  <br/>
+                    Feedbacks :<input type= "text" id="name" value=" I am so n so"/>
+             <br/>  <br/>
+   </div>
+   
+   <div id = "appointment-main-area" style="height:100%;width:70%;float:left;">
+        <br/>
+        <br/>
+            <center>NAME Book Your Appointmnet </center>
+        <br/>
+        <br/>
+   
+     <center><form id="form1">
+       
+        Speciality : 
+        <select id="Select1" name="Select1" onchange="ShowTable(this);">
+        <option value="Dentist">Dentist</option>
+        <option value="Diabetes">Diabetes</option>
+        <option value="Gynecology">Gynecology</option>
+        <option value="Hematology">Hematology</option>
+        <option value="Nephrology">Nephrology</option>
+        <option value="Orthopaedics">Orthopaedics</option>
+        <option value="Radiology">Radiology</option>
+        <option value="Surgery">Surgery</option>
+        <option value="Vascular Surgery">Vascular Surgery</option>
+        </select>
+        <br/>
+            <br/>
+         Appointment Date :  <input type='text' id="picker"/>
+         
+         <br/>
+            <br/>
+            <br/>
+            <br/>
+        
+        <table id="Dentist" border="1" >
+            <tr>
+                <th>Doctor Image</th>
+                <th>Address </th> 
+                <th>Contact</th>
+                <th>Slot</th>  
+                <th>Book Now</th>
+            </tr>
+            <tr>
+                <td onclick="showLeftMenu();">Dentist</td>
+                <td>26950, Debiasi drive Brownstown ,MI</td>  
+                <td>78678 88979 </td>
+                <td> 778</td>
+                <td>book now</td>   
+            </tr>
+        </table>
+        <table id="Diabetes" border="1">
+            <tr>
+                <th>Diabetes</th>
+                <th>Address </th> 
+                <th>Contact</th>
+                <th>Slot</th>  
+                <th>Book Now</th>
+            </tr>
+            <tr>
+                <td>Diabetes</td>
+                <td>26950, Debiasi drive Brownstown ,MI</td>  
+                <td>78678 88979 </td>
+                <td> 778</td>
+                <td>book now</td>   
+            </tr>
+        </table>
+        <table id="Gynecology" border="1">
+             <tr>
+                <th>Gynecology</th>
+                <th>Address </th> 
+                <th>Contact</th>
+                <th>Slot</th>  
+                <th>Book Now</th>
+            </tr>
+            <tr>
+                <td>Gynecology</td>
+                <td>26950, Debiasi drive Brownstown ,MI</td>  
+                <td>78678 88979 </td>
+                <td> 778</td>
+                <td>book now</td>   
+            </tr>
+        </table>
+     
+        <table id="Hematology" border="1">
+            <tr>
+                <th>Hematology</th>
+                <th>Address </th> 
+                <th>Contact</th>
+                <th>Slot</th>  
+                <th>Book Now</th>
+            </tr>
+            <tr>
+                <td>Hematology</td>
+                <td>26950, Debiasi drive Brownstown ,MI</td>  
+                <td>78678 88979 </td>
+                <td> 778</td>
+                <td>book now</td>   
+            </tr>
+        </table>
+        <table id="Nephrology" border="1">
+            <tr>
+                <th>Nephrology</th>
+                <th>Address </th> 
+                <th>Contact</th>
+                <th>Slot</th>  
+                <th>Book Now</th>
+            </tr>
+            <tr>
+                <td>Nephrology</td>
+                <td>26950, Debiasi drive Brownstown ,MI</td>  
+                <td>78678 88979 </td>
+                <td> 778</td>
+                <td>book now</td>   
+            </tr>
+        </table>
+     
+        <table id="Orthopaedics" border="1">
+            <tr>
+                <th>Doctor Image</th>
+                <th>Address </th> 
+                <th>Contact</th>
+                <th>Slot</th>  
+                <th>Book Now</th>
+            </tr>
+            <tr>
+                <td> Orthopaedics</td>
+                <td>26950, Debiasi drive Brownstown ,MI</td> 
+                <td>78678 88979 </td>
+                <td> 778</td>
+                <td>book now</td> 
+            </tr>
+        </table>
+        <table id="Radiology" border="1">
+         <tr>
+             <th>Doctor Image</th>
+            <th>Address </th> 
+            <th>Contact</th>
+            <th>Slot</th>  
+            <th>Book Now</th>    
+        </tr>
+         <tr>
+            <td> Radiology</td>
+            <td>26950, Debiasi drive Brownstown ,MI</td>  
+            <td>78678 88979 </td>
+            <td> 778</td>
+            <td>book now</td>  
+        </tr>
+        </table>
+         <table id="Surgery" border="1">
+            <tr>
+            <th>Doctor Image</th>
+            <th>Address </th> 
+            <th>Contact</th>
+            <th>Slot</th>  
+            <th>Book Now</th>   
+            </tr>
+            <tr>
+             <td>Surgery</td>
+            <td>26950, Debiasi drive Brownstown ,MI</td>  
+            <td>78678 88979 </td>
+            <td> 778</td>
+            <td>book now</td>   
+            </tr>
+        </table>
+         <table id="Vascular Surgery" border="1">
+             <tr>
+                <th>Doctor Image</th>
+                <th>Address </th> 
+                <th>Contact</th>
+                <th>Slot</th>  
+                <th>Book Now</th>
+             </tr>
+             <tr>
+                <td>Vascular Surgery</td>
+                <td>26950, Debiasi drive Brownstown ,MI</td> 
+                <td>78678 88979 </td>
+                <td> 778</td>
+                <td>book now</td>  
+            </tr>
+          </table>
+       </form></center>
+       <br/>
+    <br/>
+    <br/>
+   </div>
+   <br/>
+    <br/>
+    <br/>
+    <br/>
+   <div id = "footer" style="height:20%; width:100%; float:left;background-color:#60497A;">
+    <nav>
+        <ul>
+             <li>
+                
+               <a href ="FAQ">FAQ</a>
+          
+            </li>
+             <li>
+           
+                <a href ="About US">About Us</a>
+          
+            </li>
+             <li>
+            
+                 <a href ="Help">Help</a>
+
+            </li>
+        </ul>
+    </nav>
+    </div>
+</body>
+</html>
+<!-- this script got from www.htmlbestcodes.com-Coded by: Krishna Eydat -->
+
+
+
+
+
