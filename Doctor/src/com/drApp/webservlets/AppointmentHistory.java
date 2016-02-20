@@ -1,4 +1,4 @@
-package drApp;
+package com.drApp.webservlets;
 
 import java.io.PrintWriter;
 

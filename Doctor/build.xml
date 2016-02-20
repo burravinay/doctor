@@ -6,7 +6,7 @@
 	<property name="dest.dir" value = ".\release" />
 	<property name="doctorapp.web.dir" value = ".\release\DoctorApp" />
 	<property name="lib.dir"  value = ".\lib" />
-	
+	<property name="release.dir" value="G:\Git\Doctor\release"/>
 	<target name="All" depends="Clean,Init,WebFiles,Compile">
 	</target>
 	
@@ -39,9 +39,20 @@
 			</fileset>
 		</path>
 		<!-- javac ant task compiles and creates folder strcutore as well -->
-	    <javac includeantruntime="false" classpathref="my.class.path" destdir="${doctorapp.web.dir}/WEB-INF/classes" debug="true">
-	    	<src path="${java.src.dir}" />
+		<!-- split web app/servlet code package to web-inf classes -->
+		<javac srcdir="${java.src.dir}" includeantruntime="false" classpathref="my.class.path" destdir="${doctorapp.web.dir}/WEB-INF/classes" debug="true">
+			<include name="com/drApp/webservlets/*.java"/>
 		</javac>
+		<!-- create ejb dir -->
+		<mkdir dir="${release.dir}/EJB"/>
+		<!-- split ejb app code (ejb, local, remote, other table class) to ejb dira -->
+		<javac srcdir="${java.src.dir}" includeantruntime="false" classpathref="my.class.path" destdir="${release.dir}/EJB" debug="true">
+			<include name="com/drApp/ejb/*.java"/>
+		</javac>
+		<!-- create jar file -->
+		<jar destfile="${release.dir}/LoginEJB.jar">
+		    <fileset dir="${release.dir}/EJB"/>
+		</jar>
 	</target>
 	
 </project>

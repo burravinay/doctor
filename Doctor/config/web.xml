@@ -3,7 +3,7 @@
 <display-name>DrApp</display-name>
 <filter>
 <filter-name>controlFilter</filter-name>
-<filter-class>drApp.SecurityFilter</filter-class>
+<filter-class>com.drApp.webservlets.SecurityFilter</filter-class>
 </filter>
 <filter-mapping>
 <filter-name>controlFilter</filter-name>
@@ -11,7 +11,7 @@
 </filter-mapping>
 <servlet>
 <servlet-name>ControllerAlias</servlet-name>
-<servlet-class>drApp.LoginServlet</servlet-class>
+<servlet-class>com.drApp.webservlets.LoginServlet</servlet-class>
 </servlet>
 <servlet-mapping>
 <servlet-name>ControllerAlias</servlet-name>
@@ -19,7 +19,7 @@
 </servlet-mapping>
 <servlet>
 <servlet-name>Registration</servlet-name>
-<servlet-class>drApp.RegistrationServlet</servlet-class>
+<servlet-class>com.drApp.webservlets.RegistrationServlet</servlet-class>
 </servlet>
 <servlet-mapping>
 <servlet-name>Registration</servlet-name>
@@ -27,7 +27,7 @@
 </servlet-mapping>
 <servlet>
 <servlet-name>AppointmentHistory</servlet-name>
-<servlet-class>drApp.AppointmentHistory</servlet-class>
+<servlet-class>com.drApp.webservlets.AppointmentHistory</servlet-class>
 </servlet>
 <servlet-mapping>
 <servlet-name>AppointmentHistory</servlet-name>

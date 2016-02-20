@@ -1,4 +1,4 @@
-package drApp;
+package com.drApp.webservlets;
 
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
